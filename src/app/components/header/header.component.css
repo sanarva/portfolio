@@ -1,0 +1,29 @@
+#logo {
+    color:#cdb803;
+    border: 1px solid #cdb803;
+    padding: 0px  10px;
+    
+}
+
+/* todo esta parte comentada se tiene que implementar con una función de JS que veremos a ver cómo cojones la pongo
+
+  <script>
+    $(window).scroll(function(){
+    $('nav').toggleClass('scrolled', $(this).scrollTop() > 20);
+    });
+   </script>
+*/
+/*Esto es para dejar el menú quieto arriba*/
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+ 
+
+/*Esto es para que se ponga color negro el menú al hacer scroll */
+.bg-color.scrolled{
+    background-color: rgba(0,0,0,0.9);;
+    transition:0.75s ease;
+} 

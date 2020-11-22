@@ -1,0 +1,10 @@
+.customer {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.3s;
+  }
+  
+  .customer:hover {
+    -webkit-filter: none;
+    filter: none;
+  }

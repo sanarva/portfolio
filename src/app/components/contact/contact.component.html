@@ -1,0 +1,79 @@
+<section [@fadeInOut] class="container">
+
+    <div class="description">
+        <h1>Contáctame</h1> 
+    </div>
+
+    <form autocomplete="off" class ="d-flex flex-column" [formGroup]= "forma" (ngSubmit)="enviar()">
+
+        <div class="form-group row justify-content-center">
+            <div class="col-8">
+                <input
+                    class= "form-control"
+                    type= "text"
+                    placeholder = "Nombre"
+                    formControlName="nombre"
+                    [class.is-invalid]="nombreNoValido"
+                >
+                <small *ngIf="nombreNoValido" class="text-white">
+                    Ingrese al menos 2 letras
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="col-8">
+                <input 
+                    class="form-control"
+                    type="text"
+                    placeholder="Teléfono"
+                    formControlName="telefono"
+                    [class.is-invalid]="telefonoNoValido"
+                >
+                <small *ngIf="telefonoNoValido" class="text-white">
+                    Ingrese un teléfono válido (se requiere 9 dígitos)
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="col-8">
+            <input class="form-control"
+                   type="text"
+                   placeholder="Correo electrónico"
+                   formControlName="email"
+                   [class.is-invalid]="emailNoValido"
+                   >
+            <small *ngIf="emailNoValido" class="text-white">
+                Ingrese un email válido
+            </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="col-8">
+                <textarea class="form-control"
+                          rows = 4;
+                          placeholder="Escriba el motivo de su consulta"
+                          formControlName="comentario"
+                          [class.is-invalid]="comentarioNoValido"
+                          >
+                </textarea>
+                <small *ngIf="comentarioNoValido" class="text-white">
+                    Explique brevemente el motivo de su consulta
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group row justify-content-center">
+            <div class="input-group col-8">
+                <button 
+                    type="submit" 
+                    class="btn btn-outline-light btn-block">Enviar
+                </button>
+            </div>
+        </div>
+
+    </form>
+
+</section>
